@@ -1,4 +1,16 @@
 //YOUR FIREBASE LINKS
+const firebaseConfig = {
+    apiKey: "AIzaSyBCriXBrUYg5qeiCLk_5nuFrZBTrrWoYac",
+    authDomain: "kwitter-a16fc.firebaseapp.com",
+    databaseURL: "https://kwitter-a16fc-default-rtdb.firebaseio.com",
+    projectId: "kwitter-a16fc",
+    storageBucket: "kwitter-a16fc.appspot.com",
+    messagingSenderId: "93769977222",
+    appId: "1:93769977222:web:98e9b2fc83fd920fc5f007",
+    measurementId: "G-H5X0NJBQ2C"
+};
+
+firebase.initializeApp(firebaseConfig);
 
 function getData() {
     firebase.database().ref("/" + room_name).on('value', function(snapshot) {
