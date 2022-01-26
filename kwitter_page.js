@@ -12,6 +12,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+user_name = localStorage.getItem("user_name");
+room_name = localStorage.getItem("room_name");
+
 function getData() {
     firebase.database().ref("/" + room_name).on('value', function(snapshot) {
         document.getElementById("output").innerHTML = "";
